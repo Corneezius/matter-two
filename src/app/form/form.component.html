@@ -1,0 +1,174 @@
+<div class="container">
+  <table id="a">
+      <tr>
+          <td>Mouse, Ms. Minnie</td>
+          <td><span class="top">Case Type:</span>P.MVA</td>
+          <td><span class="top">DOA:</span>00/00/0000</td>
+          <td><span class="top">LIM Date:</span>Not Set</td>
+      </tr>
+      <tr>
+          <td><span class="top">Case #:</span>215813 </td>
+          <td><span class="top">Class:</span></td>
+          <td><span class="top">Assigned:</span>JEK</td>
+          <td><span class="top">Opened:</span>06/05/2009</td>
+      </tr>
+  </table>
+  <div style='display:inline;'  style="background-color: rgba(128, 128, 128, 0.137)">
+      <button >List</button>
+      <button >
+          <fa name="step-backward" class="icon-colors" size="lg"></fa>
+      </button>
+      <button >
+          <fa name="caret-left" class="icon-colors" size="lg" ></fa>
+      </button>
+      <button >
+          <fa name="caret-right"class="icon-colors" size="lg"></fa>
+      </button>
+      <button >
+          <fa name="step-forward" class="icon-colors" size="lg"></fa>
+        <!-- <i class="fa fa-step-forward" style="font-size:20px"></i> -->
+      </button>
+  </div>
+  <form #f='ngForm' style="background-color: rgba(128, 128, 128, 0.137)" (submit)="submit(f.value)">
+    <div class="row">
+      <div class="col-md-3">
+
+          <label for="case">Case Status: </label>
+          <input style="margin-left: 10px;" [(ngModel)]='post.caseStatus' type="checkbox" ngModel name="case" id="case">
+
+      </div>
+      <div class="col-md-3">
+
+            <label for="client">Client Status: </label>
+            <input style="margin-left: 10px;" type="checkbox" [(ngModel)]='post.clientStatus' ngModel name="client" id="client">
+
+      </div>
+      <div class="col-md-3">
+
+          <label for="typeDiscovery">Type Discovery:</label>
+          <input class="form-control" type="text" [(ngModel)]="post.discoveryType" ngModel name="typeDiscovery" id="typeDiscovery">
+
+      </div>
+      <div class="col-md-3">
+
+        <label for="name" style='color:red'>Directed to Party Name:</label>
+        <input class="form-control" type="text" [(ngModel)]="post.directedToParty" ngModel name="name" id="name">
+
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-md-3">
+
+            <label for="date">Date Served:</label>
+            <input class="form-control" type="date" [(ngModel)]="post.dateServed" ngModel name="date" id="date">
+
+      </div>
+      <div class="col-md-3">
+
+            <label for="ans">Answered:</label>
+            <input class="form-control" type="date" [(ngModel)]='post.answered' ngModel name="ans" id="ans">
+
+      </div>
+      <div class="col-md-3">
+
+        <label for="dir" style='color:red'>Directed to:</label>
+        <input class="form-control" type="text" [(ngModel)]="post.directedTo" ngModel name="dir" id="dir">
+
+      </div>
+      <div class="col-md-3">
+
+      <label for ="ctOrder">By Ct Order : </label>
+      <input style="margin-left: 10px;" type="checkbox"[(ngModel)]="post.byCtorder"  ngModel name="ctOrder" id="ctOrder">
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+
+            <label for="served" style='color:red'>Served By:</label>
+            <input class="form-control" type="text"[(ngModel)]="post.servedBy" ngModel name="served" id="served">
+
+      </div>
+      <div class="col-md-3">
+
+        <label for ="def">Srvd on def: </label>
+        <input style="margin-left: 10px;" [(ngModel)]='post.srvdOnDef' type="checkbox" ngModel name="def" id="def">
+
+      </div>
+      <div class="col-md-3">
+
+        <label for ="plt">srvd on plt: </label>
+        <input style="margin-left: 10px;" type="checkbox" [(ngModel)]='post.srvdOnPlt' ngModel name="plt" id="plt">
+
+      </div>
+      <div class="col-md-3">
+
+        <label for="due">Due:</label>
+        <input class="form-control" type="date" [(ngModel)]='post.due' ngModel name="due" id="due">
+
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+
+              <label for="Ltr">F/Up Ltr Sent:</label>
+              <input class="form-control" type="date" [(ngModel)]='post.ltSent' ngModel name="Ltr" id="Ltr">
+
+      </div>
+      <div class="col-md-3">
+
+              <label for="Clt">To Clt for Cert:</label>
+              <input class="form-control" type="date" [(ngModel)]="post.toCltforCert" ngModel name="Clt" id="Clt">
+
+      </div>
+      <div class="col-md-3">
+            <label for="rcvd">Cert Received:</label>
+            <input class="form-control" type="date" [(ngModel)]='post.certReceived' ngModel name="rcvd" id="rcvd">
+      </div>
+    </div>
+      <label for="desc_notes">Desc Notes:</label>
+      <textarea class="form-control" id="desc_notes" [(ngModel)]="post.discNotes"  ngModel name="desc" rows="5" cols="50"></textarea>
+
+      <input class="btn btn-primary pull-center" type="submit" value="Submit">
+
+  </form>
+<table id="b">
+  <tr>
+      <td>Mouse, Ms. Minnie</td>
+      <td><span class="top">Case Type:</span>P.MVA</td>
+      <td><span class="top">DOA:</span>09/22/2009</td>
+      <td><span class="top">LIM Date:</span>09/22/2011</td>
+  </tr>
+  <tr>
+      <td><span class="top">Case #:</span>215910 123456.12345</td>
+      <td><span class="top">Class:</span></td>
+      <td><span class="top">Assigned:</span>KED</td>
+      <td><span class="top">Opened:</span>09/22/2009</td>
+  </tr>
+</table>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Type Discovery</th>
+      <th>Directed to Party Name</th>
+      <th>Date Served</th>
+      <th>Answered</th>
+      <th>Case Status</th>
+      <th>Client Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor='let pst of posts'>
+        <td>{{pst.discoveryType}}</td>
+        <td>{{pst.directedToParty}}</td>
+        <td>{{pst.dateServed}}</td>
+        <td>{{pst.answered}}</td>
+        <td><input [checked]='pst.caseStatus' type="checkbox"></td>
+        <td><input [checked]='pst.clientStatus' type="checkbox"></td>
+        <td><button class="btn btn-danger" (click)='delete(pst.Id)'>Delete</button></td>
+    </tr>
+  </tbody>
+</table>
+</div>
